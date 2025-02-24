@@ -13,9 +13,13 @@ const Header = () => {
   return (
     <header className="bg-[#111111] flex justify-between container items-center py-4 mx-auto px-4 text-white min-w-full">
       {/* Logo */}
-      <div className="w-40 h-14">
-      <img src={logo} alt="Ekrani Logo" className="w-full object-cover h-full"/>
-      </div>
+      <Link to="/" className="block w-40 h-14">
+        <img
+          src={logo}
+          alt="Ekrani Logo"
+          className="w-full object-cover h-full"
+        />
+      </Link>
 
       {/* Desktop Navigation */}
       <nav>
@@ -45,11 +49,17 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       <ul
-        className={`fixed md:hidden top-0 left-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 ${
+        className={`fixed md:hidden top-0 left-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] z-50 transition-transform duration-500 ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">REACT.</h1>
+        <Link to="/" className="block w-40 h-14">
+          <img
+            src={logo}
+            alt="Ekrani Logo"
+            className="w-full object-cover h-full"
+          />
+        </Link>
         <li className="p-2 m-2">
           <Link to="/" onClick={handleNav}>
             Home
