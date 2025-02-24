@@ -7,7 +7,7 @@ const SignIn = () => {
 
   return (
     <main>
-      <div className="relative flex items-center bg-[url('/images/filmroll.jpg')] justify-center py-20 px-4 sm:px-6 lg:px-8 bg-no-repeat bg-cover relative items-center">
+      <div className="relative flex items-center bg-[url('/images/filmroll.jpg')] justify-center pb-20 pt-36 px-4 sm:px-6 lg:px-8 bg-no-repeat bg-cover relative items-center">
         <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
         <div className="max-w-md w-full space-y-8 px-10 py-8 bg-white rounded-xl z-10">
           <div className="text-center">
@@ -21,7 +21,7 @@ const SignIn = () => {
                 type="email"
                 placeholder="mail@gmail.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} 
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mt-8 content-center">
@@ -42,7 +42,10 @@ const SignIn = () => {
                   type="checkbox"
                   className="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded accent-neutral-700"
                 />
-                <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
+                <label
+                  htmlFor="remember_me"
+                  className="ml-2 block text-sm text-gray-900"
+                >
                   Remember me
                 </label>
               </div>
@@ -62,7 +65,10 @@ const SignIn = () => {
             </div>
             <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
               <span>Don't have an account?</span>
-              <Link to="/SignUp" className="text-[#00c6b1] hover:underline cursor-pointer">
+              <Link
+                to="/SignUp"
+                className="text-[#00c6b1] hover:underline cursor-pointer"
+              >
                 Sign up
               </Link>
             </p>

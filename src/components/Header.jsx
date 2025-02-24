@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#111111] flex justify-between container items-center py-4 mx-auto px-4 text-white min-w-full">
+    <header className="bg-[#111111] z-50 flex fixed justify-between container items-center shadow-md shadow-teal-500 py-4 mx-auto px-4 text-white min-w-full">
       {/* Logo */}
       <Link to="/" className="block w-40 h-14">
         <img

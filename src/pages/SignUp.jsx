@@ -8,7 +8,7 @@ const SignUp = () => {
 
   return (
     <main>
-      <div className="relative flex items-center bg-[url('/images/filmroll.jpg')] justify-center py-20 px-4 sm:px-6 lg:px-8 bg-no-repeat bg-cover relative items-center">
+      <div className="relative flex items-center bg-[url('/images/filmroll.jpg')] justify-center pb-20 pt-36 px-4 sm:px-6 lg:px-8 bg-no-repeat bg-cover relative items-center">
         <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
         <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
           <div className="text-center">
@@ -22,7 +22,7 @@ const SignUp = () => {
                 type="email"
                 placeholder="mail@gmail.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)} 
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mt-6 content-center">
@@ -68,7 +68,10 @@ const SignUp = () => {
             </div>
             <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
               <span>Already have an account?</span>
-              <Link to="/SignIn" className="text-[#00c6b1] hover:underline cursor-pointer">
+              <Link
+                to="/SignIn"
+                className="text-[#00c6b1] hover:underline cursor-pointer"
+              >
                 Sign in
               </Link>
             </p>

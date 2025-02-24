@@ -1,25 +1,326 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "Json Server Rocks",
-        "author": "Emmy"
-      },
-      {
-        "id": 2,
-        "title": "Hello World",
-        "author": "Ana"
-      }
-    ],
-    "comments": [
-        {
-          "id": 1,
-          "postId": 1,
-          "body": "Great post"
-        }
-      ],
-    "counter": {
-      "value": 0
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "genres": ["Sci-Fi", "Action"],
+      "year": 2010,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
+      "description": "A troubled thief who extracts secrets from people's dreams takes one last job: leading a dangerous mission to plant an idea in a target's subconscious.",
+      "duration": "2h 28m",
+      "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight",
+      "genres": ["Action", "Crime", "Drama"],
+      "year": 2008,
+      "imageURL": "https://musicart.xboxlive.com/7/abb02f00-0000-0000-0000-000000000002/504/image.jpg",
+      "description": "Batman, Lieutenant Gordon and District Attorney Harvey Dent go up against the Joker, a criminal mastermind in ghoulish makeup terrorizing Gotham City.",
+      "duration": "2h 32m",
+      "trailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+    },
+    {
+      "id": 3,
+      "title": "Forrest Gump",
+      "genres": ["Drama", "Romance"],
+      "year": 1994,
+      "imageURL": "https://resizing.flixster.com/kNAalgVTTW4PiJNLyUlQrRoXbTA=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15829_v_h9_aa.jpg",
+      "description": "Tom Hanks gives an astonishing performance as Forrest, an everyman whose simple innocence comes to embody a generation.",
+      "duration": "2h 22m",
+      "trailer": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+    },
+    {
+      "id": 4,
+      "title": "The Matrix",
+      "genres": ["Sci-Fi", "Action"],
+      "year": 1999,
+      "imageURL": "https://static.wikia.nocookie.net/matrix/images/5/56/The_Matrix_digital_release_cover.jpg/revision/latest?cb=20210908111245",
+      "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+      "duration": "2h 16m",
+      "trailer": "https://www.youtube.com/watch?v=vKQi3bBA1y8"
+    },
+    {
+      "id": 5,
+      "title": "Interstellar",
+      "genres": ["Sci-Fi", "Adventure", "Drama"],
+      "year": 2014,
+      "imageURL": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10543523_p_v8_as.jpg",
+      "description": "With humanity teetering on the brink of extinction, a group of astronauts travels through a wormhole in search of another inhabitable planet.",
+      "duration": "2h 49m",
+      "trailer": "https://www.youtube.com/watch?v=zSWdZVtXT7E"
+    },
+    {
+      "id": 6,
+      "title": "Gladiator",
+      "genres": ["Action", "Drama", "History"],
+      "year": 2000,
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3yequSjHHrniIugvFQukcuduxWv8pgSOZQ&s",
+      "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "duration": "2h 35m",
+      "trailer": "https://www.youtube.com/watch?v=owK1qxDselE"
+    },
+    {
+      "id": 7,
+      "title": "The Lion King",
+      "genres": ["Animation", "Adventure", "Drama"],
+      "year": 1994,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_FMjpg_UX1000_.jpg",
+      "description": "After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.",
+      "duration": "1h 29m",
+      "trailer": "https://www.youtube.com/watch?v=7TavVZMewpY"
+    },
+    {
+      "id": 8,
+      "title": "Titanic",
+      "genres": ["Drama", "Romance"],
+      "year": 1997,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BYzYyN2FiZmUtYWYzMy00MzViLWJkZTMtOGY1ZjgzNWMwN2YxXkEyXkFqcGc@._V1_.jpg",
+      "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "duration": "3h 14m",
+      "trailer": "https://www.youtube.com/watch?v=CHekzSiZjrY"
+    },
+    {
+      "id": 9,
+      "title": "The Avengers",
+      "genres": ["Action", "Sci-Fi"],
+      "year": 2012,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+      "duration": "2h 23m",
+      "trailer": "https://www.youtube.com/watch?v=eOrNdBpGMv8"
+    },
+    {
+      "id": 10,
+      "title": "Joker",
+      "genres": ["Crime", "Drama", "Thriller"],
+      "year": 2019,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Arthur Fleck, a party clown and a failed stand-up comedian, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of chaos in Gotham City.",
+      "duration": "2h 2m",
+      "trailer": "https://www.youtube.com/watch?v=zAGVQLHvwOY"
+    },
+    {
+      "id": 11,
+      "title": "Avatar",
+      "genres": ["Sci-Fi", "Adventure"],
+      "year": 2009,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNmQxNjZlZTctMWJiMC00NGMxLWJjNTctNTFiNjA1Njk3ZDQ5XkEyXkFqcGc@._V1_.jpg",
+      "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "duration": "2h 42m",
+      "trailer": "https://www.youtube.com/watch?v=5PSNL1qE6VY"
+    },
+    {
+      "id": 12,
+      "title": "The Godfather",
+      "genres": ["Crime", "Drama"],
+      "year": 1972,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "duration": "2h 55m",
+      "trailer": "https://www.youtube.com/watch?v=sY1S34973zA"
+    },
+    {
+      "id": 13,
+      "title": "Spider-Man: No Way Home",
+      "genres": ["Action", "Adventure", "Sci-Fi"],
+      "year": 2021,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_.jpg",
+      "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.",
+      "duration": "2h 28m",
+      "trailer": "https://www.youtube.com/watch?v=JfVOs4VSpmA"
+    },
+    {
+      "id": 14,
+      "title": "Coco",
+      "genres": ["Animation", "Adventure", "Family"],
+      "year": 2017,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMDIyM2E2NTAtMzlhNy00ZGUxLWI1NjgtZDY5MzhiMDc5NGU3XkEyXkFqcGc@._V1_.jpg",
+      "description": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+      "duration": "1h 45m",
+      "trailer": "https://www.youtube.com/watch?v=Ga6RYejo6Hk"
+    },
+    {
+      "id": 15,
+      "title": "John Wick",
+      "genres": ["Action", "Thriller"],
+      "year": 2014,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg",
+      "description": "John Wick is a former hitman grieving the loss of his true love. When his home is broken into, robbed, and his dog killed, he is forced to return to action to exact revenge.",
+      "duration": "1h 41m",
+      "trailer": "https://www.youtube.com/watch?v=2AUmvWm5ZDQ"
+    },
+    {
+      "id": 16,
+      "title": "The Martian",
+      "genres": ["Sci-Fi", "Drama", "Adventure"],
+      "year": 2015,
+      "imageURL": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10980706_p_v13_ar.jpg",
+      "description": "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive and can survive until a potential rescue.",
+      "duration": "2h 24m",
+      "trailer": "https://www.youtube.com/watch?v=ej3ioOneTy8"
     }
-  }
-  
+  ],
+  "tvShows": [
+    {
+      "id": 1,
+      "title": "Breaking Bad",
+      "genres": ["Crime", "Drama", "Thriller"],
+      "year": 2008,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
+      "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
+      "duration": "5 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY"
+    },
+    {
+      "id": 2,
+      "title": "Stranger Things",
+      "genres": ["Sci-Fi", "Horror", "Drama"],
+      "year": 2016,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMjE2N2MyMzEtNmU5NS00OTI0LTlkNTMtMWM1YWYyNmU4NmY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+      "duration": "4 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=mnd7sFt5c3A"
+    },
+    {
+      "id": 3,
+      "title": "Game of Thrones",
+      "genres": ["Action", "Adventure", "Drama"],
+      "year": 2011,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+      "duration": "8 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=KPLWWIOCOOQ"
+    },
+    {
+      "id": 4,
+      "title": "The Office",
+      "genres": ["Comedy"],
+      "year": 2005,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, tedium and romance.",
+      "duration": "9 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=Vmb1tqYqyII"
+    },
+    {
+      "id": 5,
+      "title": "Friends",
+      "genres": ["Comedy", "Romance"],
+      "year": 1994,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BOTU2YmM5ZjctOGVlMC00YTczLTljM2MtYjhlNGI5YWMyZjFkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Follows the personal and professional lives of six twenty to thirty year-old friends living in the Manhattan borough of New York City.",
+      "duration": "10 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=hDNNmeeJs1Q"
+    },
+    {
+      "id": 6,
+      "title": "Sherlock",
+      "genres": ["Crime", "Drama", "Mystery"],
+      "year": 2010,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNTQzNGZjNDEtOTMwYi00MzFjLWE2ZTYtYzYxYzMwMjZkZDc5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "The quirky spin on Conan Doyle's iconic sleuth pitches him as a high-functioning sociopath in modern-day London. Assisting him in his investigations: Afghanistan War vet John Watson, who's introduced to Holmes by a mutual acquaintance.",
+      "duration": "4 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=IrBKwzL3K7s"
+    },
+    {
+      "id": 7,
+      "title": "The Mandalorian",
+      "genres": ["Action", "Adventure", "Sci-Fi"],
+      "year": 2019,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNjgxZGM0OWUtZGY1MS00MWRmLTk2N2ItYjQyZTI1OThlZDliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
+      "duration": "3 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=aOC8E8z_ifw"
+    },
+    {
+      "id": 8,
+      "title": "Black Mirror",
+      "genres": ["Sci-Fi", "Drama", "Thriller"],
+      "year": 2011,
+      "imageURL": "https://honest-reviews.in/wp-content/uploads/2023/07/blackmirrorseason-1.jpeg",
+      "description": "A collection of dystopian stories exploring modern society.",
+      "duration": "6 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=2bVik34nWws"
+    },
+    {
+      "id": 9,
+      "title": "Money Heist",
+      "genres": ["Action", "Crime", "Drama"],
+      "year": 2017,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BZjkxZWJiNTUtYjQwYS00MTBlLTgwODQtM2FkNWMyMjMwOGZiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
+      "duration": "5 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=To_kVMMu-Ls"
+    },
+    {
+      "id": 10,
+      "title": "The Witcher",
+      "genres": ["Action", "Adventure", "Fantasy"],
+      "year": 2019,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMTQ5MDU5MTktMDZkMy00NDU1LWIxM2UtODg5OGFiNmRhNDBjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "duration": "3 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=tjujvMkqWe4"
+    },
+    {
+      "id": 11,
+      "title": "Peaky Blinders",
+      "genres": ["Crime", "Drama"],
+      "year": 2013,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BM2ZiNThlNzItNmY3Ny00NjA2LWJlMjItNTk1NDI3MDMyMTk4XkEyXkFqcGc@._V1_.jpg",
+      "description": "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.",
+      "duration": "6 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=oVzVdvGIC7U"
+    },
+    {
+      "id": 12,
+      "title": "The Crown",
+      "genres": ["Drama", "History"],
+      "year": 2016,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BODcyODZlZDMtZGE0Ni00NjBhLWJlYTAtZDdlNWY3MzkwMGVhXkEyXkFqcGc@._V1_.jpg",
+      "description": "Follows the political rivalries and romances of Queen Elizabeth II's reign and the events that shaped Britain for the second half of the 20th century.",
+      "duration": "6 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=JWtnJjn6ng0"
+    },
+    {
+      "id": 13,
+      "title": "Euphoria",
+      "genres": ["Drama"],
+      "year": 2019,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BZjVlN2M2N2MtOWViZC00MzIxLTlhZWEtMTIwNDIwMzE3ZWJiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "Rue Bennett is a drug addict fresh from rehab, who's struggling to stay clean and make sense of her future. Her life changes drastically when she meets Jules Vaughn, a trans girl who recently moved to town following her parents' divorce.",
+      "duration": "2 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=vuAzkZIiGxI"
+    },
+    {
+      "id": 14,
+      "title": "House of Cards",
+      "genres": ["Drama", "Thriller"],
+      "year": 2013,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BMTQ4MDczNDYwNV5BMl5BanBnXkFtZTcwNjMwMDk5OA@@._V1_FMjpg_UX1000_.jpg",
+      "description": "A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.",
+      "duration": "6 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=ULwUzF1q5w4"
+    },
+    {
+      "id": 15,
+      "title": "Succession",
+      "genres": ["Drama"],
+      "year": 2018,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNTEwNTFkZTktMzI1OC00YmRjLWE5NTUtYmZhMmJlNGUxMWU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "description": "The Roy family is known for controlling the biggest media and entertainment company in the world. However, their world changes when their father steps down from the company.",
+      "duration": "4 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=OzYxJV_rmE8"
+    },
+    {
+      "id": 16,
+      "title": "This Is Us",
+      "genres": ["Drama", "Romance"],
+      "year": 2016,
+      "imageURL": "https://m.media-amazon.com/images/M/MV5BNzk4YzY2ZjUtNTQ2YS00MWQ5LTgzZjctZTRlMmZlMzNjNDc3XkEyXkFqcGc@._V1_.jpg",
+      "description": "A heartwarming and emotional story about a unique set of triplets, their struggles, and their wonderful parents.",
+      "duration": "6 Seasons",
+      "trailer": "https://www.youtube.com/watch?v=RfYAXMwCpk0"
+    }
+  ]
+}

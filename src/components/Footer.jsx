@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="px-8 pt-16 lg:px-9 bg-[#111111] text-white">
+    <footer className="px-8 pt-16 lg:px-9 bg-[#111111] text-white  border-t border-[#2e2e2e]">
       <div className="grid gap-10 row-gap-6 mb-16 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <Link to="/" className="h-14 w-40 block">
