@@ -1,0 +1,25 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Json Server Rocks",
+        "author": "Emmy"
+      },
+      {
+        "id": 2,
+        "title": "Hello World",
+        "author": "Ana"
+      }
+    ],
+    "comments": [
+        {
+          "id": 1,
+          "postId": 1,
+          "body": "Great post"
+        }
+      ],
+    "counter": {
+      "value": 0
+    }
+  }
+  
