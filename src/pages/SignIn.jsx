@@ -40,7 +40,7 @@ const SignIn = () => {
                   id="remember_me"
                   name="remember_me"
                   type="checkbox"
-                  className="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded accent-neutral-700"
+                  className="h-4 w-4 border-gray-300 rounded accent-neutral-700"
                 />
                 <label
                   htmlFor="remember_me"
