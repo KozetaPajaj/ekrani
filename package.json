@@ -2,6 +2,7 @@
   "name": "ekrani",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ekrani.onrender.com/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/dom": "^10.4.0",
