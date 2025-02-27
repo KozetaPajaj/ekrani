@@ -51,11 +51,11 @@ const SignUp = () => {
                   id="accept_terms"
                   name="accept_terms"
                   type="checkbox"
-                  className="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded accent-neutral-700"
+                  className="h-4 w-4 border-gray-300 rounded accent-neutral-700"
                 />
-                {/* <label htmlFor="accept_terms" className="ml-2 block text-sm text-gray-900">
-                  I accept the <a href="#" className="text-[#00c6b1] hover:underline cursor-pointer">Terms and Conditions</a>
-                </label> */}
+                <label htmlFor="accept_terms" className="ml-2 block text-sm text-gray-900">
+                  I accept the <a href="*" className="text-[#00c6b1] hover:underline cursor-pointer">Terms and Conditions</a>
+                </label>
               </div>
             </div>
             <div>

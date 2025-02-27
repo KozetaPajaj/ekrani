@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
+import MovieDetails from "./pages/MovieDetails";
 import TVShows from "./pages/TVShows";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/SignIn";
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/movies" element={<Movies />} />
         <Route path="/TVShows" element={<TVShows />} />
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
+        <Route path="/tvShows/:id" element={<MovieDetails />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

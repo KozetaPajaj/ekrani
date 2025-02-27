@@ -1,9 +1,10 @@
 import React from "react";
+import MoviesList from "../components/MoviesList";
 
 const Movies = () => {
   return (
     <main className="min-h-screen">
-      <h1>Home Page</h1>
+      <MoviesList />
     </main>
   );
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rethink+Sans:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rethink+Sans:wght@400..800&display=swap");
 
 body {
   margin: 0;
@@ -8,8 +8,62 @@ body {
   background-color: #111111;
 }
 
-h1, h2,
-h3, h4,
-h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Cormorant Garamond", serif;
+}
+
+.swiper {
+  padding-bottom: 40px !important;
+}
+
+/* Pagination bullet color */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.6 !important;
+}
+
+/* Active bullet color */
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.cont {
+  animation: move 8s linear infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(45deg) translate(-120px, 0px);
+  }
+  to {
+    transform: rotate(45deg) translate(-120px, -1000px);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  @keyframes move {
+    from {
+      transform: rotate(45deg) translate(20px, 80px);
+    }
+    to {
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  @keyframes move {
+    from {
+      transform: rotate(45deg) translate(150px, 80px);
+    }
+    to {
+      transform: rotate(45deg) translate(150px, 20px);
+    }
+  }
 }

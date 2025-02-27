@@ -50,9 +50,9 @@ const SignIn = () => {
                 </label>
               </div>
               <div className="text-sm">
-                {/* <a href="#" className="font-medium text-[#00c6b1]">
+                <a href="*" className="font-medium text-[#00c6b1]">
                   Forgot your password?
-                </a> */}
+                </a>
               </div>
             </div>
             <div>
