@@ -12,8 +12,8 @@ const Home = () => {
 
   useEffect(() => {
     Promise.all([
-      axios.get("http://localhost:3001/movies"),
-      axios.get("http://localhost:3001/tvShows"),
+      axios.get("https://ekrani.onrender.com/movies"),
+      axios.get("https://ekrani.onrender.com/tvShows"),
     ])
       .then(([moviesRes, tvShowsRes]) => {
         setMovies(moviesRes.data);

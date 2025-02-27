@@ -12,8 +12,8 @@ const MovieDetails = () => {
   useEffect(() => {
     const isMovie = location.pathname.includes("/movies/");
     const url = isMovie
-      ? `http://localhost:3001/movies/${Number(id)}`
-      : `http://localhost:3001/tvShows/${Number(id)}`;
+      ? `https://ekrani.onrender.com/movies/${Number(id)}`
+      : `https://ekrani.onrender.com/tvShows/${Number(id)}`;
 
     axios
       .get(url)

@@ -14,8 +14,8 @@ function HeroSection() {
 
   useEffect(() => {
     Promise.all([
-      axios.get("http://localhost:3001/movies"),
-      axios.get("http://localhost:3001/tvShows"),
+      axios.get("https://ekrani.onrender.com/movies"),
+      axios.get("https://ekrani.onrender.com/tvShows"),
     ])
       .then(([movieResponse, tvShowResponse]) => {
         setMovies(movieResponse.data.map((item) => ({ ...item, type: "movie" })));
