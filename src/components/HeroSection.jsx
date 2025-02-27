@@ -14,12 +14,16 @@ function HeroSection() {
 
   useEffect(() => {
     Promise.all([
-      axios.get("https://ekrani.onrender.com/movies"),
-      axios.get("https://ekrani.onrender.com/tvShows"),
+      axios.get("http://localhost:3001/movies"),
+      axios.get("http://localhost:3001/tvShows"),
     ])
       .then(([movieResponse, tvShowResponse]) => {
-        setMovies(movieResponse.data.map((item) => ({ ...item, type: "movie" })));
-        setTvShows(tvShowResponse.data.map((item) => ({ ...item, type: "tvShow" })));
+        setMovies(
+          movieResponse.data.map((item) => ({ ...item, type: "movie" }))
+        );
+        setTvShows(
+          tvShowResponse.data.map((item) => ({ ...item, type: "tvShow" }))
+        );
         setLoading(false);
       })
       .catch((err) => {
@@ -83,7 +87,9 @@ function HeroSection() {
       >
         {combinedContent.map((item, index) => {
           const linkPath =
-            item.type === "movie" ? `/movies/${item.id}` : `/tvShows/${item.id}`;
+            item.type === "movie"
+              ? `/movies/${item.id}`
+              : `/tvShows/${item.id}`;
 
           return (
             <SwiperSlide key={`${item.id}-${index}`} className="relative">

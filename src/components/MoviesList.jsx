@@ -10,7 +10,7 @@ const MoviesList = ({ limit }) => {
 
   useEffect(() => {
     axios
-      .get("https://ekrani.onrender.com/movies")
+      .get("http://localhost:3001/movies")
       .then((response) => {
         setMovies(response.data);
         setLoading(false);

@@ -2,7 +2,6 @@
   "name": "ekrani",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ekrani.onrender.com/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/dom": "^10.4.0",
@@ -19,9 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run start-server && npm run start-react",
-    "start-react": "react-scripts start --port $PORT",
-    "start-server": "json-server db.json --host 0.0.0.0 --port $PORT",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^9.1.2",
     "react-router-dom": "^7.2.0"
   }
 }
