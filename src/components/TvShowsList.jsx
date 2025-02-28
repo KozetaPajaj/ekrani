@@ -10,7 +10,7 @@ const TvShowsList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/tvShows")
+      .get("https://ekrani-api.onrender.com/tvShows")
       .then((response) => {
         setShows(response.data);
         setLoading(false);
