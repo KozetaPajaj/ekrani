@@ -1,5 +1,5 @@
 import React from "react";
-import MoviesList from "../components/MoviesList";
+import MoviesList from "../components/MoviesGrid";
 
 const Movies = () => {
   return (

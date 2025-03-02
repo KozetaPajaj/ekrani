@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const MoviesList = ({ limit }) => {
+const MoviesGrid = ({ limit }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -78,4 +78,4 @@ const MoviesList = ({ limit }) => {
   );
 };
 
-export default MoviesList;
+export default MoviesGrid;

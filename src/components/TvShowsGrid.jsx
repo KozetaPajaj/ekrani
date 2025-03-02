@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const TvShowsList = () => {
+const TvShowsGrid = () => {
   const [tvShows, setShows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -80,4 +80,4 @@ const TvShowsList = () => {
   );
 };
 
-export default TvShowsList;
+export default TvShowsGrid;

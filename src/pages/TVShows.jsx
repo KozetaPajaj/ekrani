@@ -1,10 +1,10 @@
 import React from "react";
-import TvShowsList from "../components/TvShowsList";
+import TvShowsList from "../components/TvShowsGrid";
 
 const TVShows = () => {
   return (
     <main className="min-h-screen">
-      <TvShowsList/>
+      <TvShowsList />
     </main>
   );
 };
