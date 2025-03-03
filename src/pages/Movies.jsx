@@ -1,10 +1,10 @@
 import React from "react";
-import MoviesList from "../components/MoviesGrid";
+import MoviesGrid from "../components/MoviesGrid";
 
 const Movies = () => {
   return (
     <main className="min-h-screen">
-      <MoviesList />
+      <MoviesGrid />
     </main>
   );
 };
