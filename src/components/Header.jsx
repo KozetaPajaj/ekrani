@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="bg-[#111111] z-50 flex fixed justify-between container items-center shadow-md shadow-teal-500 py-4 mx-auto px-4 text-white min-w-full">
-      {/* Logo */}
+
       <Link to="/" className="block w-40 h-14">
         <img
           src={logo}
@@ -21,7 +21,6 @@ const Header = () => {
         />
       </Link>
 
-      {/* Desktop Navigation */}
       <nav>
         <ul className="hidden md:flex">
           <li className="p-2 m-2 cursor-pointer hover:text-[#569c94] transition-colors">
@@ -42,12 +41,10 @@ const Header = () => {
         </ul>
       </nav>
 
-      {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className="block md:hidden">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
-      {/* Mobile Navigation Menu */}
       <ul
         className={`fixed md:hidden top-0 left-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] z-50 transition-transform duration-500 ${
           nav ? "translate-x-0" : "-translate-x-full"
