@@ -44,7 +44,7 @@ const MoviesGrid = ({ limit }) => {
     );
 
   return (
-    <div className="pb-32 pt-42 px-16 container mx-auto movies-list">
+    <div className="pb-32 pt-42 px-8 sm:px-16 container mx-auto movies-list">
       <div className="text-left mb-8 w-full">
         <h1 className="text-white text-3xl font-bold mb-2 uppercase">Movies</h1>
         <p className="text-[#ffffffc2]">Browse your favorite movies</p>

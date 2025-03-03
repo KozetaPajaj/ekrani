@@ -44,7 +44,7 @@ const TvShowsGrid = () => {
     );
 
   return (
-    <div className="pb-32 pt-42 px-16 container mx-auto">
+    <div className="pb-32 pt-42 px-8 sm:px-16 container mx-auto">
       <div className="text-left mb-8 w-full">
         <h1 className="text-white text-3xl font-bold mb-2 uppercase">
           TV Shows
