@@ -7,23 +7,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function HeroSection() {
-  const [movies, setMovies] = useState([]);
-  const [tvShows, setTvShows] = useState([]);
+  const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Promise.all([
-      axios.get("https://ekrani-api.onrender.com/movies"),
-      axios.get("https://ekrani-api.onrender.com/tvShows"),
-    ])
-      .then(([movieResponse, tvShowResponse]) => {
-        setMovies(
-          movieResponse.data.map((item) => ({ ...item, type: "movie" }))
-        );
-        setTvShows(
-          tvShowResponse.data.map((item) => ({ ...item, type: "tvShow" }))
-        );
+    axios
+      .get("https://digital-media-store-latest.onrender.com/api/media")
+      .then((response) => {
+        setMedia(response.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -53,8 +45,8 @@ function HeroSection() {
       </div>
     );
 
-  const combinedContent = [...movies, ...tvShows].filter(
-    (item) => item.year === 2025
+  const combinedContent = media.filter(
+    (item) => item.year === 2025 && item.type
   );
 
   return (
@@ -88,8 +80,8 @@ function HeroSection() {
         {combinedContent.map((item, index) => {
           const linkPath =
             item.type === "movie"
-              ? `/movies/${item.id}`
-              : `/tvShows/${item.id}`;
+              ? `/media/${item.id}`
+              : `/media/${item.id}`;
 
           return (
             <SwiperSlide key={`${item.id}-${index}`} className="relative">

@@ -12,8 +12,12 @@ const Home = () => {
 
   useEffect(() => {
     Promise.all([
-      axios.get("https://ekrani-api.onrender.com/movies"),
-      axios.get("https://ekrani-api.onrender.com/tvShows"),
+      axios.get(
+        "https://digital-media-store-latest.onrender.com/api/media/movies?featuredType=true"
+      ),
+      axios.get(
+        "https://digital-media-store-latest.onrender.com/api/media/tvshows?featuredType=true"
+      ),
     ])
       .then(([moviesRes, tvShowsRes]) => {
         setMovies(moviesRes.data);

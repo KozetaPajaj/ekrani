@@ -10,7 +10,7 @@ const MoviesGrid = ({ limit }) => {
 
   useEffect(() => {
     axios
-      .get("https://ekrani-api.onrender.com/movies")
+      .get("https://digital-media-store-latest.onrender.com/api/media/movies")
       .then((response) => {
         setMovies(response.data);
         setLoading(false);
@@ -53,7 +53,7 @@ const MoviesGrid = ({ limit }) => {
         {movies.map((movie) => {
           return (
             <Link
-              to={`/movies/${movie.id}`}
+              to={`/media/${movie.id}`}
               key={movie.id}
               className="text-white"
             >

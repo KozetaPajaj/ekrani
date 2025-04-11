@@ -10,7 +10,7 @@ const TvShowsGrid = () => {
 
   useEffect(() => {
     axios
-      .get("https://ekrani-api.onrender.com/tvShows")
+      .get("https://digital-media-store-latest.onrender.com/api/media/tvshows")
       .then((response) => {
         setShows(response.data);
         setLoading(false);
@@ -55,7 +55,7 @@ const TvShowsGrid = () => {
         {tvShows.map((tvshows) => {
           return (
             <Link
-              to={`/tvShows/${tvshows.id}`}
+              to={`/media/${tvshows.id}`}
               key={tvshows.id}
               className="text-white"
             >
