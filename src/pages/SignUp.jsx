@@ -101,7 +101,7 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <div className="flex items-center justify-between mt-6">
+            <div className="flex items-center mt-6">
               <input
                 id="accept_terms"
                 name="accept_terms"

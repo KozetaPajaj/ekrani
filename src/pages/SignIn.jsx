@@ -76,7 +76,7 @@ const SignIn = () => {
               <p className="text-red-500 text-center">{errorMessage}</p>
             )}
             <div className="flex items-center justify-between">
-              <div className="flex items-center">
+              <div className="sm:flex flex-col items-center">
                 <input
                   id="remember_me"
                   name="remember_me"
