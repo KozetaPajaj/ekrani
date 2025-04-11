@@ -31,10 +31,7 @@ const SignIn = () => {
           email: loggedInUser.email,
         };
         localStorage.setItem("user", JSON.stringify(userToStore));
-
         login(loggedInUser);
-        console.log(loggedInUser);
-
         navigate("/");
       }
     } catch (error) {
@@ -75,8 +72,8 @@ const SignIn = () => {
             {errorMessage && (
               <p className="text-red-500 text-center">{errorMessage}</p>
             )}
-            <div className="flex items-center justify-between">
-              <div className="sm:flex flex-col items-center">
+            <div className="flex-col sm:flex-row flex items-start sm:items-center justify-between">
+              <div className="flex items-center">
                 <input
                   id="remember_me"
                   name="remember_me"

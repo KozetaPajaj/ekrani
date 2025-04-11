@@ -7,6 +7,7 @@ const TvShowsGrid = () => {
   const [tvShows, setShows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     axios
@@ -21,6 +22,10 @@ const TvShowsGrid = () => {
       });
   }, []);
 
+  const filteredtvShows = tvShows.filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   if (loading)
     return (
       <div className="w-full flex justify-center items-center min-h-[300px]">
@@ -32,7 +37,7 @@ const TvShowsGrid = () => {
     return (
       <div className="w-full flex flex-col justify-center items-center min-h-[300px] pt-32">
         <p className="text-[#d10000] text-md mb-4">
-          Failed to load movies. Please try again.
+          Failed to load TV Shows. Please try again.
         </p>
         <button
           onClick={() => window.location.reload()}
@@ -45,37 +50,49 @@ const TvShowsGrid = () => {
 
   return (
     <div className="pb-32 pt-42 px-8 sm:px-16 container mx-auto">
-      <div className="text-left mb-8 w-full">
-        <h1 className="text-white text-3xl font-bold mb-2 uppercase">
-          TV Shows
-        </h1>
-        <p className="text-[#ffffffc2]">Browse your favorite movies</p>
+      <div className="text-left mb-8 w-full flex-col sm:flex-row flex justify-between">
+        <div>
+          <h1 className="text-white text-3xl font-bold mb-2 uppercase">
+            TV Shows
+          </h1>
+          <p className="text-[#ffffffc2]">Browse your favorite TV Shows</p>
+        </div>
+        <input
+          className="p-2 cursor-pointer border-1 max-h-[38px] border-white shadow-sm shadow-[#979797] text-white bg-transparent"
+          id="search"
+          type="text"
+          placeholder="Search tvshows..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-        {tvShows.map((tvshows) => {
-          return (
+      {filteredtvShows.length === 0 ? (
+        <p className="text-white text-center w-full">No TV Shows found</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+          {filteredtvShows.map((tvShows) => (
             <Link
-              to={`/media/${tvshows.id}`}
-              key={tvshows.id}
+              to={`/media/${tvShows.id}`}
+              key={tvShows.id}
               className="text-white"
             >
-              <div className="h-[450px]">
+              <div className="h-[450px] img-wr">
                 <img
-                  src={tvshows.imageURL}
-                  alt={tvshows.title}
+                  src={tvShows.imageURL}
+                  alt={tvShows.title}
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-md font-bold mt-2 text-center uppercase">
-                {tvshows.title}
+                {tvShows.title}
               </h3>
               <p className="text-sm text-[#ffffffc2] text-center">
-                {tvshows.genres.join(" · ")}
+                {tvShows.genres.join(" · ")}
               </p>
             </Link>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -36,9 +36,7 @@ const SignUp = () => {
       }
 
       const result = await response.json();
-      setMessage("Registration successful! 🎉 Redirecting...");
-      console.log("User registered:", result);
-
+      setMessage("Registration successful! Redirecting...");
       const userToStore = {
         userId: result.userId,
         firstName: firstName,
@@ -47,8 +45,6 @@ const SignUp = () => {
         message: result.message,
       };
       localStorage.setItem("user", JSON.stringify(userToStore));
-      console.log("Saved User:", JSON.stringify(userToStore)); 
-
       setTimeout(() => {
         navigate("/SignIn");
       }, 1500);

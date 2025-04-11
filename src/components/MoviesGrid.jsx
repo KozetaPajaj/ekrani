@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -7,6 +6,7 @@ const MoviesGrid = ({ limit }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     axios
@@ -20,6 +20,10 @@ const MoviesGrid = ({ limit }) => {
         setLoading(false);
       });
   }, []);
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   if (loading)
     return (
@@ -45,13 +49,28 @@ const MoviesGrid = ({ limit }) => {
 
   return (
     <div className="pb-32 pt-42 px-8 sm:px-16 container mx-auto movies-list">
-      <div className="text-left mb-8 w-full">
-        <h1 className="text-white text-3xl font-bold mb-2 uppercase">Movies</h1>
-        <p className="text-[#ffffffc2]">Browse your favorite movies</p>
+      <div className="text-left mb-8 w-full flex-col sm:flex-row flex justify-between">
+        <div>
+          <h1 className="text-white text-3xl font-bold mb-2 uppercase">
+            Movies
+          </h1>
+          <p className="text-[#ffffffc2]">Browse your favorite movies</p>
+        </div>
+        <input
+          className="p-2 cursor-pointer border-1 max-h-[38px] border-white shadow-sm shadow-[#979797] text-white bg-transparent"
+          id="search"
+          type="text"
+          placeholder="Search movies..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
-        {movies.map((movie) => {
-          return (
+
+      {filteredMovies.length === 0 ? (
+        <p className="text-white text-center w-full">No movies found</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+          {filteredMovies.map((movie) => (
             <Link
               to={`/media/${movie.id}`}
               key={movie.id}
@@ -71,9 +90,9 @@ const MoviesGrid = ({ limit }) => {
                 {movie.genres.join(" · ")}
               </p>
             </Link>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
